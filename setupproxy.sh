@@ -2,7 +2,7 @@
 export DEBIAN_FRONTEND=noninteractive
 set -e
 
-echo "🔧 Đang cài đặt 3proxy..."
+echo "🔧 Đang cài đặt PROXY từ nghienproxy.com..."
 
 apt update > /dev/null 2>&1 && apt install -y git make gcc ufw curl > /dev/null 2>&1 || true
 sleep 2
@@ -19,8 +19,8 @@ cp ./bin/3proxy /usr/local/bin/ > /dev/null 2>&1
 chmod +x /usr/local/bin/3proxy
 
 # Thông tin người dùng & danh sách port
-USERNAME="bgsydushac"
-PASSWORD="Nhgd*a5gatAGauneis"
+USERNAME="nghienproxy"
+PASSWORD="Nghienproxy123"
 PORT_LIST=(40001 40003)
 
 CONFIG_FILE="/etc/3proxy/3proxy.cfg"
@@ -28,7 +28,7 @@ CONFIG_FILE="/etc/3proxy/3proxy.cfg"
 # Lấy địa chỉ IP công cộng
 SERVER_IP=$(curl -s ipv4.icanhazip.com)
 
-echo "⚙️ Đang tạo file cấu hình 3proxy..."
+echo "⚙️ Đang tạo file cấu hình PROXY từ nghienproxy.com..."
 sleep 1
 
 cat <<EOF > $CONFIG_FILE
